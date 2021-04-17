@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer type="person">
+    <email>jlcarrasco1990@gmail.com</email>
+    <name>rozas</name>
+  </maintainer>
+  <longdescription lang="en">
+    This is a tool for Go players
+  </longdescription>
+  <upstream>
+    <remote-id type="github">bernds/q5Go</remote-id>
+    <bugs-to>https://github.com/bernds/q5Go/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
