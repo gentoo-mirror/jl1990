@@ -37,7 +37,7 @@ S="${WORKDIR}"
 src_install() {
     # Install in /opt
     dodir /opt
-	qmake src/q5go.pro PREFIX=${DESTPATH}
+	qmake ${S}/src/q5go.pro PREFIX=${DESTPATH}
 	make
 	make install
     fperms 0755 ${DESTPATH}
