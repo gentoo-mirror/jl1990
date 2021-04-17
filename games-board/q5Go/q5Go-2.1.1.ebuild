@@ -43,9 +43,6 @@ src_compile() {
 src_install() {
 	insinto ${DESTPATH}
 	exeinto ${DESTPATH}
-	doins -r locales resources
-	doins *.{pak,bin,dat}
-	doins *.so
 	doexe ${PN}
 
     dosym "../../${DESTPATH}" "/usr/bin/${PN}"
