@@ -34,12 +34,15 @@ QA_PREBUILT="${DESTPATH}/${PN}"
 
 S="${WORKDIR}/q5Go-q5go-${PV}"
 
+
+src_compile() {
+	qmake ${S}/src/q5go.pro PREFIX=${DESTPATH} || die "build failed"
+    make || die "build failed"
+}
+
 src_install() {
-    # Install in /opt
 	insinto ${DESTPATH}
 	exeinto ${DESTPATH}
-	qmake ${S}/src/q5go.pro PREFIX=${DESTPATH}
-	make
 	doins -r locales resources
 	doins *.{pak,bin,dat}
 	doins *.so
