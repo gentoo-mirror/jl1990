@@ -36,11 +36,14 @@ S="${WORKDIR}/q5Go-q5go-${PV}"
 
 src_install() {
     # Install in /opt
-    dodir /opt
+	insinto ${DESTPATH}
+	exeinto ${DESTPATH}
 	qmake ${S}/src/q5go.pro PREFIX=${DESTPATH}
 	make
-	make install
-    fperms 0755 ${DESTPATH}
+	doins -r locales resources
+	doins *.{pak,bin,dat}
+	doins *.so
+	doexe ${PN}
 
     dosym "../../${DESTPATH}" "/usr/bin/${PN}"
     make_desktop_entry "${PN}" "q5Go" "${PN}" "Games"
