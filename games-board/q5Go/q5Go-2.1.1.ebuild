@@ -32,12 +32,12 @@ DESTPATH="/opt/${PN}"
 
 QA_PREBUILT="${DESTPATH}/${PN}"
 
-S="${WORKDIR}"
+S="${WORKDIR}/${PV}"
 
 src_install() {
     # Install in /opt
     dodir /opt
-	qmake ${S}/{$PV}/src/q5go.pro PREFIX=${DESTPATH}
+	qmake ${S}/src/q5go.pro PREFIX=${DESTPATH}
 	make
 	make install
     fperms 0755 ${DESTPATH}
