@@ -40,7 +40,7 @@ src_compile() {
 
 src_install() {
 	dobin ${PN,,}
-    make_desktop_entry "${PN,,}" "q5Go" "${PN,,}" "Games"
+    make_desktop_entry "${PN,,}" "q5Go" "${PN,,}" "Game"
 }
 
 pkg_postinst() {
