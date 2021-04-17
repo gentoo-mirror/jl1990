@@ -28,25 +28,19 @@ DEPEND=""
 RDEPEND="${DEPEND}
 >=dev-qt/qtgui-5.15.2-r1"
 
-DESTPATH="/opt/${PN}"
-
-QA_PREBUILT="${DESTPATH}/${PN}"
+QA_PREBUILT=""
 
 S="${WORKDIR}/q5Go-q5go-${PV}"
 
 
 src_compile() {
-	qmake ${S}/src/q5go.pro PREFIX=${DESTPATH} || die "build failed"
+	qmake ${S}/src/q5go.pro || die "build failed"
     make || die "build failed"
 }
 
 src_install() {
-	insinto ${DESTPATH}
-	exeinto ${DESTPATH}
-	doexe ${PN}
-
-    dosym "../../${DESTPATH}" "/usr/bin/${PN}"
-    make_desktop_entry "${PN}" "q5Go" "${PN}" "Games"
+	dobin ${PN,,}
+    make_desktop_entry "${PN,,}" "q5Go" "${PN,,}" "Games"
 }
 
 pkg_postinst() {
