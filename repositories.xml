@@ -3,12 +3,12 @@
   <repo quality="experimental" status="unofficial">
     <name>rozas</name>
       <description lang="en">Rozas's Custom Gentoo Overlay.</description>
-        <homepage>https://github.com/rozas/gentoo-overlay</homepage>
+        <homepage>https://github.com/jl1990/gentoo-overlay</homepage>
         <owner type="person">
             <name>rozas</name>
             <email>jlcarrasco1990@gmail.com</email>
         </owner>
-        <source type="git">git://github.com/rozas/gentoo-overlay.git</source>
-        <feed>https://github.com/rozas/gentoo-overlay/commits/master.atom</feed>
+        <source type="git">git://github.com/jl1990/gentoo-overlay.git</source>
+        <feed>https://github.com/jl1990/gentoo-overlay/commits/master.atom</feed>
   </repo>
 </repositories>
