@@ -28,7 +28,7 @@ DEPEND=""
 RDEPEND="${DEPEND}
 >=dev-qt/qtgui-5.15.2-r1"
 
-DESTPATH="opt/${PN}"
+DESTPATH="/opt/${PN}"
 
 QA_PREBUILT="${DESTPATH}/${PN}"
 
