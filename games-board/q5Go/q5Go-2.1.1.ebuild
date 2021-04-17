@@ -32,7 +32,7 @@ DESTPATH="/opt/${PN}"
 
 QA_PREBUILT="${DESTPATH}/${PN}"
 
-S="${WORKDIR}/${PV}"
+S="${WORKDIR}/q5Go-q5go-${PV}"
 
 src_install() {
     # Install in /opt
