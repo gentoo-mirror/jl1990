@@ -41,14 +41,17 @@ src_compile() {
 src_install() {
 	dobin ${PN,,}
     make_desktop_entry "${PN,,}" "q5Go" "${PN,,}" "Game"
+	newicon "${S}/src/images/clientwindow/Bowl.png" "${PN}.png"
 }
 
 pkg_postinst() {
     xdg_desktop_database_update
+	xdg_icon_cache_update
     xdg_mimeinfo_database_update
 }
 
 pkg_postrm() {
     xdg_desktop_database_update
+	xdg_icon_cache_update
     xdg_mimeinfo_database_update
 }
