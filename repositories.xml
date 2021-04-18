@@ -8,7 +8,9 @@
             <name>jl1990</name>
             <email>jlcarrasco1990@gmail.com</email>
         </owner>
+	<source type="git">https://github.com/jl1990/gentoo-overlay.git</source>
         <source type="git">git://github.com/jl1990/gentoo-overlay.git</source>
+	<source type="git">git@github.com:jl1990/gentoo-overlay.git</source>
         <feed>https://github.com/jl1990/gentoo-overlay/commits/master.atom</feed>
   </repo>
 </repositories>
