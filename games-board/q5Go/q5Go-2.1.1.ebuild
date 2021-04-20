@@ -28,9 +28,6 @@ DEPEND="
     dev-qt/qtgui
     dev-qt/qtsvg
     dev-qt/qtmultimedia
-    doc? (
-        app-text/pandoc
-    )
     "
 RDEPEND="${DEPEND}"
 
@@ -51,6 +48,10 @@ src_install() {
     dobin ${PN,,}
     doicon "${S}/src/images/clientwindow/Bowl.png"
     make_desktop_entry "${PN,,}" "q5Go" "/usr/share/pixmaps/Bowl.png" "Game"
+    
+    if use doc; then
+        dodoc "${S}/README.md"
+    fi
 }
 
 pkg_postinst() {
