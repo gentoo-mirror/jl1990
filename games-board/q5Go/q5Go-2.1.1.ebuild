@@ -17,7 +17,7 @@ else
     KEYWORDS="~amd64 ~x86"
 fi
 
-inherit desktop qmake_utils xdg-utils ${SCM}
+inherit desktop qmake-utils xdg-utils ${SCM}
 
 LICENSE="GPL-2"
 SLOT="0"
