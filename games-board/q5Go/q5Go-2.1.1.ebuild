@@ -28,6 +28,9 @@ DEPEND="
     dev-qt/qtgui
     dev-qt/qtsvg
     dev-qt/qtmultimedia
+    doc? (
+        app-text/pandoc
+    )
     "
 RDEPEND="${DEPEND}"
 
