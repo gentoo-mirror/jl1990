@@ -22,13 +22,13 @@ inherit desktop qmake-utils xdg-utils ${SCM}
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="doc"
+IUSE="doc usepandoc"
 
 DEPEND="
     dev-qt/qtgui
     dev-qt/qtsvg
     dev-qt/qtmultimedia
-    doc? (
+    usepandoc? (
         app-text/pandoc
     )
     "
