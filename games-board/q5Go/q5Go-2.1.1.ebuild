@@ -17,7 +17,7 @@ else
     KEYWORDS="~amd64 ~x86"
 fi
 
-inherit eutils desktop xdg-utils qmake_utils ${SCM}
+inherit desktop qmake_utils xdg-utils ${SCM}
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -44,7 +44,7 @@ src_configure() {
 }
 
 src_compile() {
-    emake
+    emake install
 }
 
 src_install() {
