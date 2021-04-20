@@ -17,17 +17,20 @@ else
     KEYWORDS="~amd64 ~x86"
 fi
 
-inherit eutils desktop xdg-utils ${SCM}
+inherit eutils desktop xdg-utils qmake_utils ${SCM}
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE=""
+IUSE="doc"
 
 DEPEND="
     dev-qt/qtgui
     dev-qt/qtsvg
     dev-qt/qtmultimedia
+    doc? (
+        app-text/pandoc
+    )
     "
 RDEPEND="${DEPEND}"
 
@@ -36,9 +39,12 @@ QA_PREBUILT=""
 S="${WORKDIR}/q5Go-q5go-${PV}"
 
 
+src_configure() {
+    eqmake5 ${S}/src/q5go.pro
+}
+
 src_compile() {
-    qmake ${S}/src/q5go.pro || die "build failed"
-    make || die "build failed"
+    emake
 }
 
 src_install() {
