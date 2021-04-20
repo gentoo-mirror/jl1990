@@ -26,7 +26,9 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="${DEPEND}
->=dev-qt/qtgui-5.15.2-r1"
+>=dev-qt/qtgui-5.15.2-r1,
+>=dev-qt/qtsvg-5.15.2,
+>=dev-qt/qtmultimedia-5.15.2"
 
 QA_PREBUILT=""
 
