@@ -50,7 +50,7 @@ src_compile() {
 src_install() {
     dobin ${PN,,}
     make_desktop_entry "${PN,,}" "q5Go" "${PN,,}" "Game"
-    doicon "${S}/src/images/clientwindow/Bowl.png"
+    doicon "${S}/src/images/clientwindow/Bowl.png" -s 32
     domenu "${S}/templates/qgo.desktop"
 }
 
