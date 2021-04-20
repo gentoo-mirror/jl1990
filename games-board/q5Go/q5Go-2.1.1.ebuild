@@ -17,7 +17,7 @@ else
     KEYWORDS="~amd64 ~x86"
 fi
 
-inherit eutils desktop xdg-utils qmake_utils ${SCM}
+inherit desktop qmake-utils xdg-utils ${SCM}
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -50,7 +50,8 @@ src_compile() {
 src_install() {
     dobin ${PN,,}
     make_desktop_entry "${PN,,}" "q5Go" "${PN,,}" "Game"
-    newicon "${S}/src/images/clientwindow/Bowl.png" "${PN}.png"
+    doicon "${S}/src/images/clientwindow/Bowl.png" "Bowl.png"
+    domenu "${S}/templates/qgo.desktop"
 }
 
 pkg_postinst() {
