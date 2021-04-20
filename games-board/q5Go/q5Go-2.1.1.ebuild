@@ -24,11 +24,12 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-DEPEND=""
-RDEPEND="${DEPEND}
->=dev-qt/qtgui-5.15.2-r1,
->=dev-qt/qtsvg-5.15.2,
->=dev-qt/qtmultimedia-5.15.2"
+DEPEND="
+    dev-qt/qtgui
+    dev-qt/qtsvg
+    dev-qt/qtmultimedia
+    "
+RDEPEND="${DEPEND}"
 
 QA_PREBUILT=""
 
