@@ -49,7 +49,7 @@ src_compile() {
 
 src_install() {
     dobin ${PN,,}
-    doicon "${S}/src/images/clientwindow/Bowl.png" -s 32
+    doicon -s 32 "${S}/src/images/clientwindow/Bowl.png"
     make_desktop_entry "${PN,,}" "q5Go" "/usr/share/icons/Bowl.png" "Game"
 }
 
