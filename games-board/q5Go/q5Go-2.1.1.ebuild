@@ -49,8 +49,8 @@ src_compile() {
 
 src_install() {
     dobin ${PN,,}
-    doicon -s 32 "${S}/src/images/clientwindow/Bowl.png"
-    make_desktop_entry "${PN,,}" "q5Go" "/usr/share/icons/Bowl.png" "Game"
+    doicon "${S}/src/images/clientwindow/Bowl.png"
+    make_desktop_entry "${PN,,}" "q5Go" "/usr/share/pixmaps/Bowl.png" "Game"
 }
 
 pkg_postinst() {
