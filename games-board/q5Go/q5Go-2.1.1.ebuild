@@ -50,7 +50,8 @@ src_compile() {
 src_install() {
     dobin ${PN,,}
     make_desktop_entry "${PN,,}" "q5Go" "${PN,,}" "Game"
-    newicon "${S}/src/images/clientwindow/Bowl.png" "${PN}.png"
+    doicon "${S}/src/images/clientwindow/Bowl.png" "Bowl.png"
+    domenu "${S}/templates/qgo.desktop"
 }
 
 pkg_postinst() {
