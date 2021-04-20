@@ -22,13 +22,13 @@ inherit desktop qmake-utils xdg-utils ${SCM}
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="doc"
+IUSE="doc usepandoc"
 
 DEPEND="
     dev-qt/qtgui
     dev-qt/qtsvg
     dev-qt/qtmultimedia
-    doc? (
+    usepandoc? (
         app-text/pandoc
     )
     "
@@ -49,9 +49,12 @@ src_compile() {
 
 src_install() {
     dobin ${PN,,}
-    make_desktop_entry "${PN,,}" "q5Go" "${PN,,}" "Game"
-    doicon "${S}/src/images/clientwindow/Bowl.png" "Bowl.png"
-    domenu "${S}/templates/qgo.desktop"
+    doicon "${S}/src/images/clientwindow/Bowl.png"
+    make_desktop_entry "${PN,,}" "q5Go" "/usr/share/pixmaps/Bowl.png" "Game"
+    
+    if use doc; then
+        dodoc "${S}/README.md"
+    fi
 }
 
 pkg_postinst() {
