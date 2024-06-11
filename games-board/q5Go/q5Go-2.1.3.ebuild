@@ -27,7 +27,7 @@ IUSE="doc usepandoc"
 DEPEND="
     dev-qt/qtgui
     dev-qt/qtsvg
-    dev-qt/qtmultimedia
+    =dev-qt/qtmultimedia-5.15.14
     usepandoc? (
         app-text/pandoc
     )
